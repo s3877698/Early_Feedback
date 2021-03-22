@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: teal;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.logo a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 45px;
+    margin-top: 20px;
+    color: teal;
+    font-size: 60px;
+    font-family: fantasy;
+}
+
+.logo a:hover {
+    cursor: pointer;
+    color: rgb(10, 185, 185);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+a.nav__link {
+    margin-left: 20px;
+    color: black;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 30px;
+
+}
+
+a.nav__link.push {
+    margin-left: 620px;
+}
+
+a.nav__link:hover {
+    /* text-decoration: underline; */
+    cursor: pointer;
+    background-color: whitesmoke;
+    
+}
+
+.nav__mobile-close:hover {
+    cursor: pointer;
+    color: black;
+}
+
+a.nav__mobile-link {
+    margin: 20px 30px;
+}
+
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+/* mobile */
+.nav__bars-btn {
+    width: 28px;
+    height: 28px;
+    color: black;
+    display: none;
+    margin-left: 50%;
+    position: absolute;
+    right: 50px;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: FadeIn linear 0.2s;
+}
+
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background: white;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+}
+
+.nav__mobile-list{
+    margin-top: 24px;
+}
+
+.nav__mobile-link{
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 8px 0px;
+    font-size: 1.4rem;
+}
+
+.nav__mobile-link:hover{
+    text-decoration: 6px solid underline;
+}
+
+.nav__mobile-close {
+    width: 28px;
+    height: 28px;
+    color: #666;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@media (max-width: 1300px) {
+    .nav__bars-btn {
+        display: block;
+    }
+
+    .nav__pc {
+        display: none;
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* under menu */
+
+.parallax-img {
+    background-image: url(./images/about_1.jpeg);
+    height: 1000px;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.block-content {
+    height: 220px;
+    background-color: teal;
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.block-content h3 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    padding-top: 30px;
+    color: white;
+}
+
+.block-content h4 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    padding-top: 10px;
+    color: white;
+}
+
+.parallax-2 {
+    background-image: url(./images/about_2.jpeg);
+    height: 1000px;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.block-content h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.parallax-3 {
+    background-image: url(./images/about_3.jpeg);
+    height: 1000px;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  footer{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 100px;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.5px solid gray ;
+}
+
+footer h3 {
+    font-size: 16px;
+}
